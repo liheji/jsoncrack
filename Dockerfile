@@ -1,4 +1,4 @@
-FROM node:lts-alpine AS base
+FROM --platform=linux/amd64 node:lts-alpine AS base
 
 # Stage 1: Install dependencies
 FROM base AS deps
