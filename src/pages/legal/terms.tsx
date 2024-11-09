@@ -1,19 +1,11 @@
 import React from "react";
 import { Box, Container, Paper, Stack, Text, Title } from "@mantine/core";
-import { NextSeo } from "next-seo";
-import { SEO } from "src/constants/seo";
 import terms from "src/data/terms.json";
 import Layout from "src/layout/Layout";
 
 const Terms = () => {
   return (
     <Layout>
-      <NextSeo
-        {...SEO}
-        title="Terms of Service - JSON Crack"
-        description="JSON Crack Terms of Service"
-        canonical="https://jsoncrack.com/legal/terms"
-      />
       <Container my={50} size="md" pb="lg">
         <Paper bg="transparent">
           <Title ta="center" c="gray.8">

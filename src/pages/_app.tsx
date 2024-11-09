@@ -4,11 +4,10 @@ import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/code-highlight/styles.css";
 import { ThemeProvider } from "styled-components";
-import { NextSeo, SoftwareAppJsonLd } from "next-seo";
+import { SoftwareAppJsonLd } from "next-seo";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { Toaster } from "react-hot-toast";
 import GlobalStyle from "src/constants/globalStyle";
-import { SEO } from "src/constants/seo";
 import { lightTheme } from "src/constants/theme";
 
 const theme = createTheme({
@@ -55,7 +54,6 @@ const IS_PROD = process.env.NODE_ENV === "production";
 function JsonCrack({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NextSeo {...SEO} />
       <SoftwareAppJsonLd
         name="JSON Crack"
         price="0"

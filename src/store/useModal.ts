@@ -13,7 +13,6 @@ const initialStates: ModalState = {
   download: false,
   import: false,
   node: false,
-  upgrade: false,
   jwt: false,
   schema: false,
   jq: false,

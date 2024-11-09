@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useMantineColorScheme } from "@mantine/core";
 import { ThemeProvider } from "styled-components";
-import { NextSeo } from "next-seo";
 import toast from "react-hot-toast";
 import { darkTheme, lightTheme } from "src/constants/theme";
 import useGraph from "src/containers/Editor/components/views/GraphView/stores/useGraph";
@@ -72,7 +71,6 @@ const WidgetPage = () => {
 
   return (
     <>
-      <NextSeo noindex />
       <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
         <Toolbar isWidget />
         <GraphView isWidget />

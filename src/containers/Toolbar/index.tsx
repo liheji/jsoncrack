@@ -1,16 +1,14 @@
 import React from "react";
-import { Text, Flex, Group, Select } from "@mantine/core";
+import { Flex, Group, Select } from "@mantine/core";
 import styled from "styled-components";
 import toast from "react-hot-toast";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
-import { LuCrown } from "react-icons/lu";
 import { SearchInput } from "src/containers/Toolbar/SearchInput";
 import { FileFormat } from "src/enums/file.enum";
 import { JSONCrackLogo } from "src/layout/JsonCrackLogo";
 import useFile from "src/store/useFile";
 import useModal from "src/store/useModal";
-import { AccountMenu } from "./AccountMenu";
 import { FileMenu } from "./FileMenu";
 import { Logo } from "./Logo";
 import { OptionsMenu } from "./OptionsMenu";
@@ -91,17 +89,6 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
         </Group>
       )}
       <Group gap="xs" justify="right" w="100%" style={{ flexWrap: "nowrap" }}>
-        {!isWidget && (
-          <StyledToolElement onClick={() => setVisible("upgrade")(true)} $highlight>
-            <Flex align="center" gap="6">
-              <LuCrown size="16" />
-              <Text c="bright" fw={600} fz="xs">
-                Unlock advanced features
-              </Text>
-            </Flex>
-          </StyledToolElement>
-        )}
-
         <SearchInput />
         {!isWidget && (
           <>
@@ -109,7 +96,6 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
               <FiDownload size="18" />
             </StyledToolElement>
             <ZoomMenu />
-            <AccountMenu />
             <OptionsMenu />
             <StyledToolElement title="Fullscreen" $hide={isWidget} onClick={fullscreenBrowser}>
               <AiOutlineFullscreen size="18" />

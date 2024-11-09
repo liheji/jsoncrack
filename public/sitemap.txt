@@ -1,5 +1,4 @@
 https://jsoncrack.com
-https://jsoncrack.com/editor
 https://jsoncrack.com/docs
 https://jsoncrack.com/widget
 https://jsoncrack.com/legal/terms

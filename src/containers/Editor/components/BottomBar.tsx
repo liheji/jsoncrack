@@ -4,14 +4,7 @@ import { Flex, Popover, Text } from "@mantine/core";
 import styled from "styled-components";
 import { event as gaEvent } from "nextjs-google-analytics";
 import { BiSolidDockLeft } from "react-icons/bi";
-import {
-  VscCheck,
-  VscError,
-  VscFeedback,
-  VscRunAll,
-  VscSync,
-  VscSyncIgnored,
-} from "react-icons/vsc";
+import { VscCheck, VscError, VscRunAll, VscSync, VscSyncIgnored } from "react-icons/vsc";
 import useGraph from "src/containers/Editor/components/views/GraphView/stores/useGraph";
 import useConfig from "src/store/useConfig";
 import useFile from "src/store/useFile";
@@ -145,15 +138,14 @@ export const BottomBar = () => {
 
       <StyledRight>
         <StyledBottomBarItem>Nodes: {nodeCount}</StyledBottomBarItem>
-        <Link
-          href="https://github.com/AykutSarac/jsoncrack.com/discussions"
-          target="_blank"
-          rel="noopener"
-        >
-          <StyledBottomBarItem>
-            <VscFeedback />
-            Feedback
-          </StyledBottomBarItem>
+        <Link href="/docs" target="_blank" rel="noopener">
+          <StyledBottomBarItem>Docs</StyledBottomBarItem>
+        </Link>
+        <Link href="/legal/terms" target="_blank" rel="noopener">
+          <StyledBottomBarItem>Terms</StyledBottomBarItem>
+        </Link>
+        <Link href="/legal/privacy" target="_blank" rel="noopener">
+          <StyledBottomBarItem>Privacy</StyledBottomBarItem>
         </Link>
       </StyledRight>
     </StyledBottomBar>

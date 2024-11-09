@@ -1,19 +1,11 @@
 import React from "react";
 import { Box, Container, Paper, Stack, Text, Title } from "@mantine/core";
-import { NextSeo } from "next-seo";
-import { SEO } from "src/constants/seo";
 import privacy from "src/data/privacy.json";
 import Layout from "src/layout/Layout";
 
 const Privacy = () => {
   return (
     <Layout>
-      <NextSeo
-        {...SEO}
-        title="Privacy Policy - JSON Crack"
-        description="JSON Crack Privacy Policy"
-        canonical="https://jsoncrack.com/legal/privacy"
-      />
       <Container my={50} size="md" pb="lg">
         <Paper bg="transparent">
           <Title ta="center" c="gray.8">
